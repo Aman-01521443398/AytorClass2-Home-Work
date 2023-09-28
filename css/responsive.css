@@ -1,0 +1,17 @@
+@media (max-width : 767px) 
+{
+    #Banner .slide {
+        height:500px ;
+    }
+
+    #Banner .slide h2 {
+        
+        font-size: 41px;
+           }
+    #Banner .BannerDots {
+      
+        bottom: 17%;
+                        
+    }
+
+}

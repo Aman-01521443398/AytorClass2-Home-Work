@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primaryFont:'Josefin Sans', sans-serif;
+    --secondaryFont: 'Roboto', sans-serif;
+    --mainColor: #FF6F61;
+    --secondarycolor: #11161E;
+
+
+}
+
+/** Common Css start **/
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol {list-style: none;}
+a{text-decoration: none;}
+
+h1,h2,h3,h4,h5,ul,p,span,ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {font-family: var(--primaryFont);}
+/** common css end **/
+
+/** 
+Theme Name = Aytor Ecommerce
+Developer = Mohammed Aman Ullah
+
+/**  Home page
+Sl No   particular name
+     1.      Navebar 
+     2.      Banner
+     3.      Services 
+     
+**/
+
+/* Home page start here */
+
+/* Navebar Star here*/
+.sm-Navbar, .myCustomNav {
+    background: rgb(255,111,97);
+    background: radial-gradient(circle, rgba(255,111,97,1) 3%, rgba(148,187,233,0.8771708512506565) 99%); 
+}
+
+.sm-Navbar .myCustomNav .iconsGroup li,
+.myCustomNav .iconsGroup li{
+    display: inline-block;
+}
+
+.sm-Navbar .iconsGroup  li a,
+.sm-Navbar .iconsGroup  li span,
+.myCustomNav .iconsGroup  li a,
+.myCustomNav .iconsGroup  li span {
+     
+    color: #151A32;
+    position: relative;
+    font-size: 24px;
+    margin: 0px 10px;
+}
+
+.sm-Navbar .iconsGroup  li a span.cardNumber,
+.myCustomNav .iconsGroup  li a span.cardNumber{
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: block;
+    text-align: center;
+    line-height: 17px;
+    top: -5px;
+    right: -17px;
+    font-size: 14px;
+    position: absolute;
+   }
+
+.myCustomNav #naveMenu ul li a{ 
+    margin: 43px 0px;
+    padding: 0px 22.5px;
+    font-family: var(--primaryFont);
+    font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+}
+
+.myCustomNav #naveMenu ul li:hover a{
+    color: #FF6F61;
+}
+
+/** Sidebar start**/
+.sm-Navbar .menu button{ 
+    border: none;
+    font-size: 24px;
+    background-color: white;
+}
+
+
+.sm-menu ul li a{
+    border-bottom: 2px solid rgb(227, 227, 232) ;
+    display: block;
+    padding: 10px;
+    color: #151A32;
+}
+/** Sidebar end**/
+
+/* Navebar Ends here */
+
+/* Banner start here*/
+
+#Banner .slide {
+    height: 800px;
+}
+
+#Banner .slide h5 {
+ color: #1D1D1D;
+font-size: 18px;
+font-weight: 600;
+line-height: 28px;
+}
+
+#Banner .slide h2{
+color: #1D1D1D;
+font-size: 64px;
+font-weight: 700;
+line-height: 74px;
+margin: 14px 0px 16px;
+transition-delay: 0.1s;}
+
+
+#Banner .slide p{
+color: #1D1D1D;
+font-family: var(--secondaryFont);
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+transition-delay: 0.2s;}
+
+#Banner .slide a {
+  background-color: var(--mainColor);
+color: var(--Comon-Colot, #FFF);
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+margin: 29px 0px;
+display: inline-block;
+line-height: 30px;
+padding: 13px 37px;
+transition-delay: 0.3s;
+}
+
+#Banner .slide *{
+    transform: translateY(80px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+#Banner .slide.slick-active * {
+
+   transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+}
+#Banner .BannerDots {
+    position: absolute;
+    bottom: 20%;
+    width: 100%; 
+    left:50%;
+    transform: translateX(-50%)
+}
+#Banner .BannerDots li{
+    display: inline-block;
+}
+
+#Banner .BannerDots li button {
+    border: none;
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+          
+}
+#Banner .BannerDots li.slick-active button {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background:  var(--mainColor);
+}
+
+/* Feature category Css Start Here*/
+#featuredCategory{
+    padding: 100px 0px;
+}
+
+#featuredCategory .categoryPicture img{
+    width: 100%;
+}
+#featuredCategory .categoryPicture{
+    position: relative;
+}
+
+/* overlay start*/
+
+.categoryPicture .overlay{
+    position: absolute;
+            background:rgb(17, 22, 30, .4); 
+        inset: 20px;
+        transform: scale(0);
+        opacity: 0;
+        transition: 0.05s;
+}
+
+.categoryPicture .overlay * {
+    color: white;
+}
+
+.overlay .overlay-content h2 {
+    padding: 12px;
+
+}
+.categoryPicture:hover .overlay{
+    transform: scale(1);
+        opacity: 1;
+}
+
+/* overlay end */
+
+/* Feature category Css end Here*/
+
+/* New Arrival start */
+
+#NewArrival h2{
+    color: var(--secondarycolor);
+text-align: center;
+font-size: 36px;
+font-weight: 700;
+padding: 24px 0px;
+}
+
+
+/* New Arrival product start*/
+
+
+#NewArrival {
+    padding: 24px 0px;}
+
+
+.productImg img{
+    width: 100%;
+    display: block;
+
+}
+/* Label start */
+.productImg .label{
+    position:absolute;
+    color: var(--Comon-Colot, #FFF);
+font-size: 16px;
+font-weight: 400;
+line-height: 26px; 
+background-color: var(--mainColor);
+padding: 5px 7px 5px 12px;
+border-radius: 25px 0px 0px 25px;
+transform: rotate(-90deg);
+margin-top: 8px;
+z-index: 99;
+}
+
+/* Label end */
+
+
+/* overlay start */
+.productImg {
+    position: relative;
+}
+.productImg .overlay{
+    opacity: 0;
+    position: absolute;
+     background:rgb(17, 22, 30, .4); 
+      inset: 0;
+      transition: 0.2s;
+}
+.productImg .overlay ul{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    
+}
+.productImg .overlay ul li a{
+        width: 36px;
+    height: 36px;
+    display: inline-block;
+    background-color: white;
+    color: #151A32;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    transform: translateX(-50px);
+    transition: 0.2s ease;
+    opacity: 0;
+}
+
+.productImg .overlay ul li:nth-child(2) a{
+    transition-delay: 0.2s;
+}
+.productImg .overlay ul li:nth-child(3) a{
+    transition-delay: 0.3s;
+}
+.productImg .overlay ul li:nth-child(4) a{
+    transition-delay: 0.4s;
+}
+
+.productImg:hover .overlay ul li a{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.productImg:hover .overlay{ opacity: 1;}
+
+.productSlide {
+    padding: 0px 24px;
+}
+
+
+.productImg .overlay ul li:hover a{
+    background-color: var(--mainColor);
+    color: white;
+
+}
+
+
+/* overlay end */
+
+.productContent {
+text-align: center;
+padding: 24px 0px 0px 0px;
+ }
+
+#NewArrival .productContent p{
+    color: var(--Paragraph-Color, #444);
+
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+
+ }
+#NewArrival .productContent h3 {
+color: var(--Text-Color, #11161E);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+padding: 5px 0px 0px 0px ;
+}
+
+#NewArrival .productContent span{
+    padding: 11px 0px 0px 0px;
+font-size: 10px;
+color: var(--mainColor);
+}
+
+/* New Arrival product end*/
+
+
+/* Spa Cosmetic Cream Start */
+
+#SpaCosmetic {
+    height: 400px;
+    background-color: #46433C;
+    margin: 35px 0px;
+}    
+
+.SpaCosmeticCream-Content {
+    padding-top: 45px;
+    position: relative;
+    z-index: 99;
+}
+
+.SpaCosmeticCream-Content h3 {
+color: var(--Comon-Colot, #FFF);
+font-size: 36px;
+font-weight: 700;
+line-height: 46px;
+}
+.SpaCosmeticCream-Content p{
+    color: var(--Comon-Colot, #FFF);
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+}
+.SpaCosmeticCream-Content a {
+background-color: transparent;
+border: white solid 2px;
+color: var(--Comon-Colot, #FFF);
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+margin: 29px 0px;
+display: inline-block;
+line-height: 30px;
+padding: 13px 37px;
+
+}
+
+#SpaCosmetic {
+    position: relative;
+}
+
+#SpaCosmetic .SpaCosmeticCreamimg img {
+    width: 783px;
+    height: 397px;;
+transform: rotate(-0.454deg);
+flex-shrink: 0;
+border-left:137px; 
+position: absolute;
+right: 0;
+top: 0;}
+
+/* Spa Cosmetic Cream end */
+
+/* Best Seller product start*/
+
+
+#BestSeller-Products h2{
+    color: var(--secondarycolor);
+text-align: center;
+font-size: 36px;
+font-weight: 700;
+padding: 24px 0px;
+}
+
+#BestSeller-Products {
+    padding: 24px 0px;}
+
+
+.BestsellerproductImg img{
+    width: 100%;
+    display: block;
+
+}
+/* Label start */
+.BestsellerproductImg .label{
+position:absolute;
+color: var(--Comon-Colot, #FFF);
+font-size: 16px;
+font-weight: 400;
+line-height: 26px; 
+background-color: var(--mainColor);
+padding: 5px 7px 5px 12px;
+border-radius: 25px 0px 0px 25px;
+transform: rotate(-90deg);
+margin-top: 8px;
+z-index: 99;
+}
+
+/* Label end */
+
+
+/* overlay start */
+.BestsellerproductImg {
+    position: relative;
+}
+.BestsellerproductImg .overlay{
+    opacity: 0;
+    position: absolute;
+     background:rgb(17, 22, 30, .4); 
+      inset: 0;
+      transition: 0.2s;
+}
+.BestsellerproductImg .overlay ul{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    
+}
+.BestsellerproductImg .overlay ul li a{
+        width: 36px;
+    height: 36px;
+    display: inline-block;
+    background-color: white;
+    color: #151A32;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    transform: translateX(-50px);
+    transition: 0.2s ease;
+    opacity: 0;
+}
+
+.BestsellerproductImg .overlay ul li:nth-child(2) a{
+    transition-delay: 0.2s;
+}
+.productImg .overlay ul li:nth-child(3) a{
+    transition-delay: 0.3s;
+}
+.BestsellerproductImg .overlay ul li:nth-child(4) a{
+    transition-delay: 0.4s;
+}
+
+.BestsellerproductImg:hover .overlay ul li a{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.BestsellerproductImg:hover .overlay{ opacity: 1;}
+
+.productSlide {
+    padding: 0px 24px;
+}
+
+
+.BestsellerproductImg .overlay ul li:hover a{
+    background-color: var(--mainColor);
+    color: white;
+
+}
+
+
+/* overlay end */
+
+.productContent {
+text-align: center;
+padding: 24px 0px 0px 0px;
+ }
+
+#BestSeller-Products .productContent p{
+    color: var(--Paragraph-Color, #444);
+
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+
+ }
+#BestSeller-Products .productContent h3 {
+color: var(--Text-Color, #11161E);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+padding: 5px 0px 0px 0px ;
+}
+
+#BestSeller-Products .productContent span{
+    padding: 11px 0px 0px 0px;
+font-size: 10px;
+color: var(--mainColor);
+}
+
+#BestSeller-Products .BestSeller {
+    margin-bottom: 35px;
+}
+
+
+
+#BestSeller-Products  .Allproducts-Show a {
+    background-color: var(--mainColor);
+    color: var(--Comon-Colot, #FFF);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 29px 0px;
+    display: inline-block;
+    line-height: 30px;
+    padding: 13px 27px;
+    
+}
+
+/* Best Seller product end*/
+
+
+
+/* Deals of the Days start */ 
+
+#DealsofDay h3{
+color: var(--secondarycolor);
+text-align: center;
+font-size: 40px;
+font-weight: 700;
+padding: 24px 0px;
+}
+/* CownDown clock Start*/
+.cownDown{
+    width: 100%;
+}
+.cownDown h2 {
+color: var(--Text-Color, #11161E);
+font-size: 35px;
+font-weight: 700;
+line-height: 34px;
+text-align: center;
+margin: 10px 0px;
+}
+.cownDown h2 li{
+    display: inline-block;
+}
+/* CownDown clock end*/
+#DealsofDay .DealsofDayBox{
+    background-color: #CACACA;
+    height: 500x;
+    margin-top: 20px ;
+    align-items: center;
+}
+#DealsofDay .DealsofDayBoxcontent {
+   
+    width: 600px;
+    height: 350px;
+    background-color: #A6AAB7;
+    margin:75px 26px 86px 39px;
+    margin: auto;}
+#DealsofDay .DealsofDayBoxcontent h5 {
+    color: #1D1D1D;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 28px;}
+   
+   #DealsofDay .DealsofDayBoxcontent h2{
+   color: #1D1D1D;
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 36px;
+   margin: 14px 0px 16px;
+   transition-delay: 0.1s;}
+      
+   #DealsofDay .DealsofDayBoxcontent p{
+   color: #1D1D1D;
+   font-family: var(--secondaryFont);
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 28px;
+   transition-delay: 0.2s;}
+   
+
+   
+   #DealsofDay .DealsofDayBoxcontent a {
+     background-color: #151A32;
+   color: var(--Comon-Colot, #FFF);
+   text-align: center;
+   font-size: 18px;
+   font-weight: 600;
+   margin: 29px 0px;
+   display: inline-block;
+   line-height: 30px;
+   padding: 13px 37px;
+   transition-delay: 0.3s;
+   }
+
+/* Deals of the Days end */ 
+
+
+
+/* Explore More Start */
+
+.Special-offer{
+
+    width: 100%;
+    margin-top: 20px;
+    height: 400px;
+    background-color: #F1F3F4;
+    position: relative;
+}
+.Special-Offervideo{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 10px;
+    
+
+}
+.Explore-More-Content {
+    margin-top: 65px;
+}
+
+
+#Explore .Special-offer .Explore-More-Content h5 {
+    color: #1D1D1D;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 28px;}
+   
+#Explore .Special-offer .Explore-More-Content h2{
+   color: #1D1D1D;
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 36px;
+   margin: 14px 0px 16px;
+   transition-delay: 0.1s;}
+      
+#Explore .Special-offer .Explore-More-Content p{
+   color: #1D1D1D;
+   font-family: var(--secondaryFont);
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 28px;
+   transition-delay: 0.2s;}
+   
+
+   
+#Explore .Special-offer .Explore-More-Content a {
+     background-color: var(--mainColor);
+   color: var(--Comon-Colot, #FFF);
+   text-align: center;
+   font-size: 18px;
+   font-weight: 600;
+   margin: 29px 0px;
+   display: inline-block;
+   line-height: 30px;
+   padding: 13px 37px;
+   transition-delay: 0.3s;
+   }
+
+/* Explore more End */
+
+
+/* Latest News Start */
+
+#Latest h2{
+color: var(--secondarycolor);
+text-align: center;
+font-size: 36px;
+font-weight: 700;
+padding: 30px 0px;
+}
+
+
+#Latest .Latest-News-Img img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+#Latest .Latest-News-Div .LatestContent{
+    margin: 9px 0px;
+}
+
+#Latest .Latest-News-Div .LatestContent h5{  
+    color: var(--Text-Color, #11161E);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; 
+margin-bottom: 2px;}
+
+#Latest .Latest-News-Div .LatestContent p {
+        color: var(--Paragraph-Color, #444);
+
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+margin-bottom: 4px;
+}
+#Latest .Latest-News-Div .LatestContent a {
+color: var(--Paragraph-Color, #444);
+font-family: Josefin Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+margin-right: 5px;
+}
+
+#Latest .Latest-News-Div .LatestContent .Readmore {
+    display: inline-block;
+    width: 100%;
+}
+#Latest .Latest-News-Div:hover .LatestContent h5,
+#Latest .Latest-News-Div:hover .LatestContent a {
+
+    color: var(--mainColor);
+} 
+
+#Latest .Latest-News-Div.slick-active * {
+
+    transform: translateY(0px);
+     visibility: visible;
+     opacity: 1;
+ }
+ #Latest .BannerDots {
+     position: absolute;
+     bottom: 20%;
+     width: 100%; 
+     left:50%;
+     transform: translateX(-50%)
+ }
+ #Banner .BannerDots li{
+     display: inline-block;
+ }
+ 
+ #Banner .BannerDots li button {
+     border: none;
+     color: transparent;
+     width: 20px;
+     height: 20px;
+     margin: 5px;
+     border-radius: 50%;
+     background-color: rgb(0, 0, 0);
+           
+ }
+ #Banner .BannerDots li.slick-active button {
+     width: 10px;
+     height: 10px;
+     border-radius: 10px;
+     background:  var(--mainColor);
+ }
+
+
+
+    
+
+
+
+
+
+
+/* Latest News End*/
+
+/* Banner End here*/
+
+/* Home page end here */
+
+
